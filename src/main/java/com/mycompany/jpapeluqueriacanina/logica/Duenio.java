@@ -23,7 +23,11 @@ public class Duenio implements Serializable {
     private String direccion;
     
     /*  - cascade = CascadeType.ALL incluye persistir, borrar, actualizar, etc.
-        - orphanRemoval = true elimina mascotas que ya no estén asociadas a ningún dueño. */
+        - orphanRemoval = true elimina mascotas que ya no estén asociadas a ningún dueño.
+        - orphanRemoval = true elimina mascotas que ya no estén asociadas a ningún dueño. 
+        - mappedBy = "duenioAsociado", es para que desde la clase "Mascota", la variable de 
+        instancia "duenioAsociado" se encargue de generar el @OneToMany. 
+    */
     @OneToMany(mappedBy = "duenioAsociado", cascade = CascadeType.ALL, orphanRemoval = true)
     private ArrayList<Mascota> listaMascota = new ArrayList<>();
 

@@ -167,6 +167,8 @@ public class JpaPeluqueriaCanina {
         return capitalizado.toString().trim(); // Convierte el StringBuilder a un String y le quita el espacio extra al final con .trim().
     }
     
+
+    // Sobrecarga. Este método muestra una lista de dueños enumerados para que el usuario pueda elegir.
     public static void verListaDeDuenios(ArrayList<Duenio> listaDuenios) {
         for (int i = 0; i < listaDuenios.size(); i++) {
             System.out.println((i + 1) + ". " + listaDuenios.get(i).getNombre());

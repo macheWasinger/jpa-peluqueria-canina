@@ -24,6 +24,9 @@ public class Mascota implements Serializable {
     private int edad;
     private String observaciones;
     
+    /* @JoinColumn, une al "ArrayList<Mascota> listaMascota" creada en la clase "Duenio" 
+    con la columna "duenioAsociado_id" creada en la tabla "mascota" de la base de datos. 
+    "duenioAsociado_id" contiene la clave primaria del dueño al que pertenece la mascota. */
     @ManyToOne
     @JoinColumn(name = "duenioAsociado_id")
     private Duenio duenioAsociado;
